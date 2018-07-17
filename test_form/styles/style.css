@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+/* Last edit: 3/3/2018 8:00 PM */
+/* Last validated error free: 3/3/2018 9:27 PM */
+
+/* Use some of the ideas and code suggestions presented in Chapter 16 of HTML and CSS: Visual QuickStart Guide, 8th Edition
+By Elizabeth Castro, Bruce Hyslop */
+
+/* Universal style for the page */
+body {
+    background-color: #005073;
+    background: linear-gradient(#005073, #82afc3,#005073);
+    font-family: Calibri, "Courier New", Georgia, "Times New Roman", sans-serif;
+    margin: auto;
+    margin: 2%;
+    text-align: left;
+    color: black;
+}
+
+/* changing the list style to none */
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: block;
+}
+
+/* setting the heading styles and color */
+h1, h2 {
+    background-color: #2680a7;
+    margin: auto;
+    padding-left: 5px;
+    border: 2px #ACA4B6;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    border-radius: 5px;
+}
+
+/* centering the header */
+h1 {
+    text-align: center;
+    box-shadow: -1px 1px 5px black;
+}
+
+/* adding a style margin to the form */
+main, h1 {
+    margin: 0 5%;
+}
+
+/* adding space between fieldsets */
+fieldset, article {
+    margin: 25px 0;
+    background-color: #dfdcdc;
+    border-radius: 10px;
+    box-shadow: -1px 1px 5px black;
+}
+
+/* submit button style */
+#submit_form {
+    background-color: white;
+    font-size: 1.2em;
+    border: 2px outset #ACA4B6;
+    border-radius: 5px;
+}
+
+/* style to center all the address and name inputs */
+.center_label {
+    float: left;
+    margin-right: 5px;
+    text-align: right;
+    width: 100px;
+}
+
+.center {
+    text-align: center;
+}
+
+/* fixing the size of the input boxes */
+#city {
+    width: 150px;
+}
+
+/* sets size for zip code input */
+#zip_code {
+    width: 40px;
+}
+
+/* inline for valid confirmation display */
+.inline {
+    display: inline;
+}
+
+.red_text {
+    color: red;
+}
+
+h1.red_text {
+    background-color: #dfdcdc;
+}
+
+#confirmation_header {
+    margin: 0 15px;
+}
+
+article {
+    padding: 10px;
+}
+
+#valid_address {
+    margin-left: 105px;
+}
+
+/* for smaller screens */
+@media (max-width: 380px) {
+    form, h1, article {
+        width: 370px;
+    }
+}

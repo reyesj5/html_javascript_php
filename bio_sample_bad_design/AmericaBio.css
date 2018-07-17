@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+/* Universal style for the playbill page */
+body {
+    background-image: url(img/bio/Stage_Curtain_Background.jpg);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: darkblue;
+}
+
+/* changes the margins of the page */
+#container {
+    margin: 3% 3%;
+}
+
+/* adds background to banner */
+header {
+    background-image: url(img/main/Flag.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    border: 5px red inset;
+    margin: auto;
+}
+
+/* changes the style of the banner heading */
+header h1 {
+    margin-right: 10%;
+    margin-top: 1%;
+}
+
+/* changes the style of links for the banner */
+h1 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* changes styles to match links in original page */
+a:hover {
+    color: red;
+    background: grey;
+    text-decoration: underline;
+}
+
+/* sets the width and size for the floating column bios */
+main {
+    padding: 1%;
+    margin: auto;
+}
+
+/* sets a size for the images and margins. The images will look blurry but this works best for my design idea. If I were to use it for something more practical, I would ensure getting the images to rendered in better quality. */
+img {
+    width: 250px;
+    margin: 2% 2% 0 2%;
+}
+
+/* removes the bullet points and style */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* styles the boxes for the images */
+.cast {
+    border: 5px red inset;
+    width: 260px;
+    background-color: beige;
+    margin: auto;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+/* adds a border to the footer and sets the style of the text */
+footer {
+    width: auto;
+    margin: 5%;
+    margin-top: 5px;
+    background-color: beige;
+    color: black;
+    border: 1px black outset;
+}
+
+/* special effects of disappearing image when size is enough for a mouse to be in use (not a phone or tablet)*/
+@media (min-width: 635px) {
+    /* makes the size dynamic */
+    header {
+        margin: auto;
+        width: 65%
+    }
+    
+    /* sets a fixed widt with columns of the images */
+    main {
+        padding: 1%;
+        width: 555px;
+        margin: auto;
+        padding-bottom: 175px;
+    }
+    
+    /* adds a margin for the images */
+    .cast {
+        margin: 4px 5%;
+    }
+    
+    /* sets the text to the size of the images  and removes it*/
+    .cast ul {
+        display: none;
+        padding: 30% 0;
+    }
+
+    /* some pics need different padding */
+    .lilpadding ul {
+        padding: 22% 0;
+    }
+
+    /* removes image when hover */
+    .cast:hover img {
+        display: none;
+    }
+
+    /* makes the text display again after image is removed */
+    .cast:hover ul {
+        display: block;
+    }
+
+    /* floats about half the images to the left */
+    #left {
+        float: left;
+        margin-left: -18px;
+    }
+
+    /* adjusts the margins to have two columns */
+    #right {
+        margin-left: 275px;
+    }
+    
+    /* changes the width of the footer, clears the float, and adjusts the margins */
+    footer {
+        float: clear;
+        width: 560px;
+        margin: auto;
+        margin-top: 15px;
+    }
+
+}
+
+

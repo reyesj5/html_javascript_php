@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+/* Last edit: 2/19/2018 8:00 PM */
+/* Last validated error free: 2/19/2018 9:27 PM */
+
+/* Use some of the ideas and code suggestions presented in Chapter 16 of HTML and CSS: Visual QuickStart Guide, 8th Edition
+By Elizabeth Castro, Bruce Hyslop */
+
+/* Universal style for the page */
+body {
+    background-color: ghostwhite;
+    font-family: Calibri, "Courier New", Georgia, "Times New Roman", sans-serif;
+    margin: auto;
+    margin: 2%;
+    text-align: left;
+    color: black;
+}
+
+/* changing the list style to none */
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: block;
+}
+
+/* setting the heading styles and color */
+h1, h2 {
+    background-color: #ff0000;
+    margin: auto;
+    padding-left: 5px;
+    border: 2px #ACA4B6;
+    color: black;
+    text-shadow: 1px 1px 1px white;
+    border-radius: 5px;
+}
+
+/* adding a style margin to the form */
+form, h1 {
+    margin: 0 5%;
+}
+
+/* adding space between fieldsets */
+fieldset {
+    margin: 25px 0;
+    background-color: #ffbaba;
+    border-radius: 10px;
+}
+
+/* submit button style */
+#submit_form {
+    background-color: white;
+    font-size: 1.2em;
+    border: 2px outset #ACA4B6;
+    border-radius: 5px;
+}
+
+/* style to center all the address and name inputs */
+.center {
+    float: left;
+    margin-right: 5px;
+    text-align: right;
+    width: 100px;
+}
+
+/* fixing the size of the input boxes */
+#city {
+    width: 150px;
+}
+
+/* sets size for zip code input */
+#zip_code {
+    width: 40px;
+}
+
+/* aligns the inserted browser text */
+#browser {
+    margin: 0 5%;
+}
+
+/* for smaller screens */
+@media (max-width: 380px) {
+    form, h1 {
+        width: 370px;
+    }
+}

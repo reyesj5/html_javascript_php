@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Last edit: 2/22/2018 7:00 PM -->
+    <!-- Last validated error free: 2/19/2018 7:06 PM -->
+    
+    <meta charset="utf-8">
+    <title>Jose Reyes HW5 A/B</title>
+    <link rel="stylesheet" href="styles/form_style.css">
+    
+    <!-- Used some of the ideas and code suggestions presented in Chapter 16 of HTML and CSS: Visual QuickStart Guide, 8th Edition
+    By Elizabeth Castro, Bruce Hyslop -->
+    <!-- Based the javascript from the instructions and class notes -->
+    
+</head>
+<body>
+     <!-- creates a header for the page -->
+    <header>
+        <h1>General Information</h1>
+    </header>
+    <main>
+        <!-- this contains the entire form -->
+        <form name="formB" method="post" onsubmit="return validateForm(formB)" action="https://cs101.cs.uchicago.edu/~sterner/show-data.php">
+            <!-- fieldset for name and last name -->
+            <fieldset id="info">
+                <h2>Name:</h2>
+                <ul>
+                    <li>
+                        <div class="center">
+                            <label for="first_name">First Name</label>
+                        </div>
+                        <input type="text" id="first_name" name="first_name" placeholder="Enter your first name" autofocus="autofocus"/>
+                    </li>
+                    <li>
+                        <div class="center">
+                            <label for="last_name">Last Name</label>
+                        </div>
+                        <input type="text" id="last_name" name="last_name" placeholder="Enter your last name"/>
+                    </li>
+                </ul>
+            </fieldset>
+            <!-- fieldset for billing address and email address-->
+            <fieldset id="address">
+                <h2>Address:</h2>
+                <ul>
+                    <li>
+                        <div class="center">
+                            <label for="street_address">Street</label>
+                        </div>
+                        <input type="text" id="street_address" name="street_address" placeholder="Enter your street address"/>
+                    </li>
+                    <li>
+                        <div class="center">
+                            <label for="city">City</label>
+                        </div>
+                        <input type="text" id="city" name="city" placeholder="Enter your city"/>
+                    </li>
+                    <!-- this is where the javascript will generate all the states in the optgroup tag -->
+                    <li>
+                        <div class="center">
+                            <label for="state">State</label>
+                        </div>
+                        <select id="state" name="state">
+                            <option value="none">Select a State</option>
+                            <optgroup id="state_selection" label="US States">
+                            </optgroup>
+                        </select>
+                    </li>
+                    <li>
+                        <div class="center">
+                            <label for="zip_code">Zip Code</label>
+                        </div>
+                        <input type="text" id="zip_code" name="zip_code" placeholder="12345"/>
+                    </li>
+                    <li>
+                        <div class="center">
+                            <label for="email">Email Address</label>
+                        </div>
+                        <input type="text" id="email" name="email" placeholder="username@example.com"/>
+                    </li>
+                </ul>
+            </fieldset>
+            <!-- fieldset for method of payment -->
+            <fieldset id="pay_method">
+                <h2>Choose a payment method:</h2>
+                <ul>
+                    <li>
+                        <input type="radio" id="credit_card" name="payment" value="credit_card" />
+                        <label for="credit_card">Credit Card</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="bitcoin" name="payment" value="bitcoin"/>
+                        <label for="bitcoin">BitCoin</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <!-- fieldset for marketing info -->
+            <fieldset id="other_info">
+                <h2>Are you a member yet?</h2>
+                <ul class="checkboxes">
+                    <li>
+                        <input type="checkbox" id="member" name="member" value="is_member" />
+                        <label for="member">I am a member.</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="newsletter" name="newsletter" value="send" />
+                        <label for="newsletter">Please send the newsletter.</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="preshow" name="preshow" value="interested" />
+                        <label for="preshow">I am interested in preshow events.</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="interest" name="interest" value="not_interested" />
+                        <label for="interest">I’m not interested.</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <!-- button for submitting form -->
+            <input type="submit" id="submit_form" value="Submit">
+        </form>
+    </main>
+    <!-- Script to check what browser the user is using -->
+    <script>
+        /* Opted for using a loop instead for convenience, the code just has to make sure that Chrome comes first in the array so as to not confuse safari with other browsers */
+        var browsers = ['Chrome', 'Safari', 'Firefox'];
+        var getBrowser = function() {
+            var userBrowser = navigator.userAgent;
+            var found = false;
+            /* checks each browser by creater a new regexp */
+            for (var i = 0; i<browsers.length; i++) {
+                var regexp = new RegExp(browsers[i]);
+                if (regexp.test(userBrowser)) {
+                    var message = "<p id='browser'><br>You are using " + browsers[i] + " as your browser.</p>";
+                    document.open();
+                    document.write(message);
+                    document.close();
+                    found = true;
+                    break;
+                }
+            }
+            /* condition to check if browser was found or not */
+            if (!found) {
+                var message = "<p id='browser'><br>Unrecognized browser. <br>User-agent header: " + userBrowser + "</p>";
+                document.open();
+                document.write(message);
+                document.close();
+            }
+        }
+        getBrowser();
+    </script>
+    <script src="js/form.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Last edit: 2/18/2018 3:00 PM -->
+    <!-- Last validated error free: 2/18/2018 7:27 PM -->
+    
+    <meta charset="utf-8">
+    <title>Jose Reyes HW4 B</title>
+    <link rel="stylesheet" href="styles/form_style.css">
+    
+     <!-- Used some of the ideas and code suggestions presented in Chapter 16 of HTML and CSS: Visual QuickStart Guide, 8th Edition
+    By Elizabeth Castro, Bruce Hyslop -->
+    
+</head>
+<body>
+     <!-- creates a header for the page -->
+    <header>
+        <h1>General Information</h1>
+    </header>
+    <main>
+        <!-- this contains the entire form -->
+        <form method="post" action="https://cs101.cs.uchicago.edu/~sterner/show-data.php">
+            <!-- fieldset for name and last name -->
+            <fieldset id="info">
+                <h2>Name:</h2>
+                <div>
+                    <ul>
+                        <li>
+                            <div class="center">
+                                <label for="first_name">First Name:</label>
+                            </div>
+                            <input type="text" id="first_name" name="first_name" required="required" placeholder="Enter your first name" autofocus="autofocus"/>
+                        </li>
+                        <li>
+                            <div class="center">
+                                <label for="last_name">Last Name:</label>
+                            </div>
+                            <input type="text" id="last_name" name="last_name" required="required" placeholder="Enter your last name"/>
+                        </li>
+                    </ul>
+                </div>
+            </fieldset>
+            <!-- fieldset for billing address and email address-->
+            <fieldset id="address">
+                <h2>Address:</h2>
+                <div>
+                    <ul>
+                        <li>
+                            <div class="center">
+                                <label for="street_address">Street:</label>
+                            </div>
+                            <input type="text" id="street_address" name="street_address" required="required" placeholder="Enter your street address"/>
+                        </li>
+                        <li>
+                            <div class="center">
+                                <label for="city">City:</label>
+                            </div>
+                            <input type="text" id="city" name="city" required="required" placeholder="Enter your city"/>
+                        </li>
+                        <!-- this is where the javascript will generate all the states in the optgroup tag -->
+                        <li>
+                            <div class="center">
+                                <label for="state">State:</label>
+                            </div>
+                            <select id="state" name="state">
+                                <optgroup id="state_selection" label="US States">
+                                </optgroup>
+                            </select>
+                        </li>
+                        <li>
+                            <div class="center">
+                                <label for="zip_code">Zip Code:</label>
+                            </div>
+                            <input type="text" id="zip_code" name="zip_code" required="required" placeholder="E.g. 12345" maxlength="5"/>
+                        </li>
+                        <li>
+                            <div class="center">
+                                <label for="email">Email Address:</label>
+                            </div>
+                            <input type="text" id="email" name="email" required="required" placeholder="username@example.com"/>
+                        </li>
+                    </ul>
+                </div>
+            </fieldset>
+            <!-- fieldset for method of payment -->
+            <fieldset id="pay_method">
+                <h2>Choose a payment method:</h2>
+                <div>
+                    <ul>
+                        <li>
+                            <input type="radio" id="credit_card" name="payment" value="credit_card" />
+                            <label for="credit_card">Credit Card</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="paypal" name="payment" value="paypal"/>
+                            <label for="paypal">PayPal</label>
+                        </li>
+                    </ul>
+                </div>
+            </fieldset>
+            <!-- fieldset for marketing info -->
+            <fieldset id="other_info">
+                <h2>Are you a member yet?</h2>
+                <ul class="checkboxes">
+                    <li>
+                        <input type="checkbox" id="member" name="member" value="is_member" />
+                        <label for="member">I am a member.</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="newsletter" name="newsletter" value="send" />
+                        <label for="newsletter">Please send the newsletter.</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="preshow" name="preshow" value="interested" />
+                        <label for="preshow">I am interested in preshow events.</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <!-- button for submitting form -->
+            <input type="submit" id="submit_form" value="Submit">
+        </form>
+    </main>
+    <script src="js/states.js"></script>
+</body>
+</html>

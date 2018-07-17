@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Test Page</title>
+</head>
+    <body>
+        <form action="http://cs101.cs.uchicago.edu/~reyesj5/hw6/registerData.php" method="post">
+            <div>
+                <label for="name">Name:</label> 
+                <select id="title" name="title">
+                    <option value="Mr.">Mr.</option>
+                    <option value="Mrs.">Mrs.</option>
+                    <option value="Ms.">Ms.</option>
+                </select> 
+                <input id="name" type="text" name="name" size="20" />
+            </div>
+            <div>
+                <label for="email">Email Address:</label>
+                <input id="email" type="text" name="email" size="20">
+            </div>
+            <div>
+                <label for="feedback">Response: This is...</label>
+                <input id="excellent" type="radio" name="response" value="excellent">
+                <label for="excellent">Excellent</label>
+                <input id="okay" type="radio" name="response" value="okay">
+                <label for="okay">Okay</label>
+                <input id="boring" type="radio" name="response" value="boring">
+                <label for="boring">Boring</label>
+            </div>
+            <div>
+                <label for="comments">Comments:</label>
+                <textarea name="comments" rows="3" cols="30"></textarea>
+            </div>
+            <input type="submit" value="Submit!">
+        </form>
+    </body>
+</html>

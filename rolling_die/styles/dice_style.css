@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+/* Last edit: 2/3/2018 8:00 PM */
+/* Last validated error free: 2/3/2018 8:27 PM */
+
+/* universal style for the page */
+body {
+    font-family: "Courier New", sans-serif;
+    margin: auto;
+}
+        
+
+/* makes first die float on the left */
+#first {
+    float: left;
+}
+        
+/* styles the roll dice button */
+/* similar style used in the submit button for Part A */
+#roll_dice {
+    display: block;
+    background-color: darkblue;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px #333;
+    cursor: pointer;
+    color: #fff;
+    margin: 12px 0;
+    margin-left: 175px;
+    padding: 8px;
+    width: 220px;
+    text-align: center;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 0px #CCC;
+    text-decoration: none;
+}

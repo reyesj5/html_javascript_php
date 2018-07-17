@@ -1,0 +1,12 @@
+Jose Reyes
+Different Media Types
+1/20/18
+HW2
+
+I can make the changes for a smartphone or tablet by adjusting the sizes of the margins and padding to be percentages instead of values using pixels or em's. This allows for the screen/ciewport to change size depending on the device, allowing for one design to work for all devices. 
+
+Design A:
+This is a static design, but changing the margins to percentages and setting a max width of the viewport to change styles for different sizes would accomodate for different media types.
+
+Design B:
+In this design, I mad eit be useful for all types of devices by starting with smaller screens and once a larger viewport was available, changing into columns and adjusting the margins and size of the banner and footer. 

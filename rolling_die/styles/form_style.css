@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+/* Last edit: 2/3/2018 3:00 PM */
+/* Last validated error free: 2/3/2018 7:27 PM */
+
+/* Use some of the ideas and code suggestions presented in Chapter 16 of HTML and CSS: Visual QuickStart Guide, 8th Edition
+By Elizabeth Castro, Bruce Hyslop */
+/* Consulted to some extent about feedback of styles with my classmate Marco Anaya */
+
+/* Universal style for the page */
+body {
+    background-color: lightblue;
+    font-family: "Courier New", Georgia, "Times New Roman", sans-serif;
+    margin: 5% 10%;
+    text-align: center;
+}
+
+/* style for the header */
+header {
+    padding-left: 10px;
+    margin-bottom: 10px;
+    margin: auto;
+}
+
+/* changes the style of the form, aligning text and centering it */
+form {
+    display: inline-block;
+    text-align: center;
+}
+
+/* removes the style of the list */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* sets a background for the fieldset and a border */
+fieldset {
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 2px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    padding: 0 15px;
+}
+
+/* floats the input elements to the left */
+div {
+    float: left;
+}
+
+/* changes the style for the headings of the fieldsets */
+h1, h2 {
+    background-color: darkblue;
+    border-bottom: 1px solid #d4d4d4;
+    border-top: 1px solid #d4d4d4;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px #ccc;
+    color: #fff;
+    margin: 12px 0;
+    padding: 0.3em 1em;
+    text-align: left;
+    text-shadow: #9FBEB9 1px 1px 1px;
+    text-transform: uppercase;
+}
+
+/* fixes the margin of the header */
+h1 {
+    margin-right: 10px;
+    text-align: center;
+    font-size: 1.65em;
+}
+
+/* makes the headings for h2 smaller */
+h2 {
+    font-size: 1.1em;
+}
+
+/* removing the bullet points and aligining the text of the unordered list for inputs*/
+ul {
+    list-style-type: none;
+    padding: 0;
+    line-height: 1.5em;
+    text-align: right
+}
+
+
+/* resets the alignment and width of radius and checkboxes, and show day */
+#feedback input, #show_day input, select {
+    width: auto;
+    margin: auto;
+}
+
+/* aligns the options to the left */
+#feedback li, #show_day li {
+    text-align: left;
+}
+
+/* sets a fixed size and margin for the following elements */
+input {
+    width: 200px;
+}
+
+#state {
+    width: 100px;
+    margin-right: 104px;
+}
+
+#zip_code {
+    width: 65px;
+    margin-right: 136px;
+}
+
+#tickets {
+    width: 30px;
+}
+
+/* styles the submit button */
+#submit_form {
+    background-color: darkblue;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px #333;
+    cursor: pointer;
+    color: #fff;
+    margin: 12px;
+    padding: 8px;
+    margin: auto;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 0px #CCC;
+}
+
+
+/* changes the header for bigger screens in which it grows more than the main elements */
+@media (min-width: 580px) {
+    header {
+        width: 440px;
+    }
+}
+
+/* adds support for smaller screens */
+@media (max-width: 460px) {
+    fieldset {
+        width: 320px;
+    }
+    
+    header {
+        width: 340px;
+    }
+}

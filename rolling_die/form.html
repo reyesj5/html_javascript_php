@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Last edit: 2/1/2018 3:00 PM -->
+    <!-- Last validated error free: 2/1/2018 7:27 PM -->
+    
+    <meta charset="utf-8">
+    <title>Jose Reyes HW3 A</title>
+    <link rel="stylesheet" href="styles/form_style.css">
+    
+    <!-- Used some of the ideas and code suggestions presented in Chapter 16 of HTML and CSS: Visual QuickStart Guide, 8th Edition
+    By Elizabeth Castro, Bruce Hyslop -->
+
+</head>
+<body>
+    <!-- creates a header for the page -->
+    <header>
+        <h1>Get your tickets:</h1>
+    </header>
+    <main>
+        <!-- this contains the entire form -->
+        <form method="post" action="https://cs101.cs.uchicago.edu/~sterner/show-data.php">
+            <!-- fieldset for name and last name -->
+            <fieldset id="info">
+                <h2>Costumer Info:</h2>
+                <div>
+                    <ul>
+                        <li>
+                            <label for="first_name">First Name:</label>
+                            <input type="text" id="first_name" name="first_name" required="required" placeholder="Enter your first name" autofocus="autofocus"/>
+                        </li>
+                        <li>
+                            <label for="last_name">Last Name:</label>
+                            <input type="text" id="last_name" name="last_name" required="required" placeholder="Enter your last name"/>
+                        </li>
+                    </ul>
+                </div>
+            </fieldset>
+            <!-- fieldset for billing address -->
+            <fieldset id="billing">
+                <h2>Billing address:</h2>
+                <div>
+                    <ul>
+                        <li>
+                            <label for="street_address">Street:</label>
+                            <input type="text" id="street_address" name="street_address" required="required" placeholder="Enter your street address"/>
+                        </li>
+                        <li>
+                            <label for="city">City:</label>
+                            <input type="text" id="city" name="city" required="required" placeholder="Enter your city"/>
+                        </li>
+                        <li>
+                            <label for="state">State:</label>
+                            <select id="state" name="state">
+                                <optgroup label="US States">
+                                    <option value="AL">Alabama</option>
+                                    <option value="AK">Alaska</option>
+                                    <option value="AZ">Arizona</option>
+                                    <option value="AR">Arkansas</option>
+                                    <option value="CA">California</option>
+                                    <option value="CO">Colorado</option>
+                                    <option value="CT">Connecticut</option>
+                                    <option value="DE">Delaware</option>
+                                    <option value="FL">Florida</option>
+                                    <option value="GA">Georgia</option>
+                                    <option value="HI">Hawaii</option>
+                                    <option value="ID">Idaho</option>
+                                    <option value="IL">Illinois</option>
+                                    <option value="IN">Indiana</option>
+                                    <option value="IA">Iowa</option>
+                                    <option value="KS">Kansas</option>
+                                    <option value="KY">Kentucky</option>
+                                    <option value="LA">Louisiana</option>
+                                    <option value="ME">Maine</option>
+                                    <option value="MD">Maryland</option>
+                                    <option value="MA">Massachusetts</option>
+                                    <option value="MI">Michigan</option>
+                                    <option value="MN">Minnesota</option>
+                                    <option value="MS">Mississippi</option>
+                                    <option value="MO">Missouri</option>
+                                    <option value="MT">Montana</option>
+                                    <option value="NE">Nebraska</option>
+                                    <option value="NV">Nevada</option>
+                                    <option value="NH">New Hampshire</option>
+                                    <option value="NJ">New Jersey</option>
+                                    <option value="NM">New Mexico</option>
+                                    <option value="NY">New York</option>
+                                    <option value="NC">North Carolina</option>
+                                    <option value="ND">North Dakota</option>
+                                    <option value="OH">Ohio</option>
+                                    <option value="OK">Oklahoma</option>
+                                    <option value="OR">Oregon</option>
+                                    <option value="PA">Pennsylvania</option>
+                                    <option value="RI">Rhode Island</option>
+                                    <option value="SC">South Carolina</option>
+                                    <option value="SD">South Dakota</option>
+                                    <option value="TN">Tennessee</option>
+                                    <option value="TX">Texas</option>
+                                    <option value="UT">Utah</option>
+                                    <option value="VT">Vermont</option>
+                                    <option value="VA">Virginia</option>
+                                    <option value="WA">Washington</option>
+                                    <option value="WV">West Virginia</option>
+                                    <option value="WI">Wisconsin</option>
+                                    <option value="WY">Wyoming</option>
+                                </optgroup>
+                                <optgroup label="US Territories">
+                                    <option value="AS">American Samoa</option>
+                                    <option value="DC">District Of Columbia</option>
+                                    <option value="GU">Guam</option>
+                                    <option value="MP">Northern Mariana Islands</option>
+                                    <option value="PR">Puerto Rico</option>
+                                    <option value="UM">United States Minor Outlying Islands</option>
+                                    <option value="VI">Virgin Islands</option>
+                                </optgroup>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="zip_code">Zip Code:</label>
+                            <input type="text" id="zip_code" name="zip_code" required="required" placeholder="E.g. 12345" maxlength="5"/>
+                        </li>
+                    </ul>
+                </div>
+            </fieldset>
+            <!-- fieldset for day of show -->
+            <fieldset id="show_day">
+                <h2>Choose a day:</h2>
+                <div>
+                    <ul>
+                        <li>
+                            <input type="radio" id="saturday" name="show_day" value="Saturday" />
+                            <label for="saturday">Saturday</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="sunday" name="show_day" value="Sunday"/>
+                            <label for="sunday">Sunday</label>
+                        </li>
+                    </ul>
+                </div>
+            </fieldset>
+            <!-- fieldset for number of tickets -->
+            <fieldset id="amount">
+                <h2>Number of tickets:</h2>
+                <label for="tickets">How many tickets would you like to buy?</label>
+                <select id="tickets" name="tickets">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>        
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>                        
+                </select>
+            </fieldset>
+            <!-- fieldset for marketing info -->
+            <fieldset id="feedback">
+                <h2>How did you hear about the play?</h2>
+                <ul class="checkboxes">
+                    <li>
+                        <input type="checkbox" id="email" name="heard_through[0]" value="email" />
+                        <label for="email">Email.</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="facebook" name="heard_through[1]" value="facebook" />
+                        <label for="facebook">Facebook.</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="magazine" name="heard_through[2]" value="magazine" />
+                        <label for="magazine">Magazine.</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="subscription" name="heard_through[3]" value="subscription" />
+                        <label for="subscription">Subscription</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="friend" name="heard_through[4]" value="friend" />
+                        <label for="friend">Through a friend.</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="other" name="heard_through[5]" value="other" />
+                        <label for="other">Other</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <!-- button for submitting form -->
+            <input type="submit" id="submit_form" value="Buy Tickets!">
+        </form>
+    </main>
+</body>
+</html>

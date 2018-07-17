@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+/* Last edit: 3/3/2018 8:00 PM */
+/* Last validated error free: 3/3/2018 9:27 PM */
+
+/* Use some of the ideas and code suggestions presented in Chapter 16 of HTML and CSS: Visual QuickStart Guide, 8th Edition
+By Elizabeth Castro, Bruce Hyslop */
+
+/* Universal style for the page */
+body {
+    background: #fff;
+    font-family: "Times New Roman", sans-serif;
+    margin: 5% auto;
+    color: black;
+    width: 95%;
+}
+
+/* adding a margin and shadodw to the main content */
+main {
+    box-shadow: 1px 1px 15px 2px black;
+	padding: 1em;
+}
+
+/* centering the header and setting style */
+h1 {
+    color: #a30404;
+	text-shadow: 1px 1px 0px black;
+}
+
+/* changing the style of the h2 headers */
+h2 {
+    color: rgb(172, 0, 0);
+	text: 1px 1px 0px rgb(0, 100, 165);
+}
+
+/* seetingt he border of the titles and dates */
+article.plays {
+    border-bottom: 1px solid #8c8a8a;
+    margin-bottom: 25px;
+}
+
+.top_border {
+    border-top: 1px solid #8c8a8a;
+}
+
+/* setting the hilited style for the titles */
+div.hilited {
+    background-color: #e0bbaa;
+}
+
+/* style to set elements in the same lines */
+.play_title, .play_date {
+	display: inline-block;
+}
+
+/* changing the title to bold and bigger font */
+.play_title {
+	font-size: 1.2em;
+    width: 50%;
+    padding-left: 10px;
+}
+
+/* aligning the show date to the right */
+.play_date {
+	text-align: right;
+    width: 45%;
+}
+
+/* changing the list style to none */
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: block;
+}
+
+/* style of the play summaries */
+.play_summary {
+    display: none;
+    text-align: justify;
+    margin-left: 20px;
+}
+
+.play_summary p {
+    text-indent: 10px;
+    overflow: hidden;
+}
+
+/* setting a background for form legend */
+legend {
+    font-size: 1.7em;
+    text-transform: uppercase;
+    background-color: #9b2929;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+}
+
+/* centering the radio buttons */
+.play_radios {
+    border: none;
+    width: 200px;
+    margin: auto;
+}
+
+/* changing the margin and alignment of radio text */
+.radios {
+    margin: 15px 0;
+    text-align: left;
+}
+
+/* class to center any element that may need to be centered */
+.center {
+    text-align: center;
+}
+
+/* setting text as bold for certain elements*/
+.bold {
+    font-weight: bold;
+}
+
+/* submit button style */
+#submit_form {
+    background-color: #9b2929;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+    font-size: 1.2em;
+    border: 2px outset #ACA4B6;
+    border-radius: 5px;
+}
+
+/* changing the style of the footer */
+p#footer {
+    text-align: right;
+    font-size: small;
+    margin: 3% 0;
+	padding: 0 2%;
+}

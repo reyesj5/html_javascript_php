@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+/* Worked with my classmate Marco Anaya to figure out the syntax of the styles */
+
+/* Universal style for the page */
+body {
+    font-family: "Century schoolbook", serif;
+    margin: 30px 15% 30px 15%;
+    text-align: left;
+}
+
+/* changing the border and font of the navigation tab */
+nav {
+    border-style: solid;
+    border-color: red;
+    border-width: 5px 0px 1px 0px;
+    font-family: helvetica, sans-serif;
+    font-size: 1.2em;
+}
+
+/* removing the bullet points and aligining the text of the unordered list */
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+/* padding the element of the list for the navigation tab */
+ul li {
+    display: inline;
+    padding: 0 6% 0 6%;
+}
+
+/* ensuring the navigation tab looks decent in smaller screens */
+@media (max-width: 650px) {
+    ul li {
+        display: inherit;
+    }
+}
+
+/* changing the height of the title */
+div {
+    line-height: 1.2em;
+}
+
+/* changing the font of the headings */
+h1, h2 {
+    font-family: helvetica, sans-serif;
+}
+
+/* changing the size of the title */
+h1 {
+    font-size: 1.5em;
+}
+
+/* changing the margins and size of the h2 */
+h2 {
+    margin: 75px 0 50px;
+    font-size: 1.35em;
+}
+
+/* changing the margin and size of the author heading */
+#author {
+    margin: 0 0 45px 15%;
+    font-size: 1.3em;
+}
+
+/* setting the paragraph margins and size */
+p {
+    margin: 20px;
+    font-size: 1.05em;
+}
+
+/* italicizing quotes */
+q {
+    font-style: italic;
+}
+
+/* changing the color of the links to dark brown */
+a {
+    color: rgb(46,5,5);
+}
+
+/* changing the margins of the images */
+img {
+    margin: 20px;
+}
+
+/* wrapping text on the images */
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+    margin-right: 0;
+}
+
+.center {
+    display: block;
+    margin: auto;
+}
+
+/* setting the borders and margins of the footer */
+footer {
+    border-style: solid;
+    border-color: seagreen;
+    border-width: 1px 0 5px 0;
+    margin-top: 100px;
+    padding: 12px 0 15px 0;
+}
+

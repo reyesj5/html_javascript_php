@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+/* Sets format and font for the entire page */
+body {
+    width: 850px;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    color: darkblue;
+}
+
+/* wrapper for the margins of the static page */
+#wrapper {
+    padding: 20px 30px;
+}
+
+/* changes to background to beige */
+#background {
+    background-color: beige;
+}
+
+/* algins the headers of the page */
+h1, h2 {
+    text-align: center;
+}
+
+/* changes the the headers of the banner and the backgroung */
+header {
+    border: 5px solid darkblue;
+    background-image: url(img/main/Flag.gif);
+    background-repeat: repeat-x;
+    background-position: 0px 0px;
+    padding: 10px;
+    margin-bottom: -10px;
+}
+
+/* sets the mpadding adn size of the banner header */
+header h1 {
+    font-weight: bolder;
+    padding-left: 15px;
+}
+
+/* changes the position and style of the side header in the banner */
+header h2 {
+    text-align: left;
+    color: orange;
+    position: absolute;
+    left: 52px;
+    top: 22px;
+    z-index: 1;
+    font-size: 1.3em;
+}
+
+/* sets style for the aside */
+aside {
+    border: 5px red inset;
+    width: 350px;
+    float: left;
+    background-image: url(img/main/Curtains.jpg);
+    background-repeat: no-repeat;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+/* changes the background, style and margins for the header of the aside */
+aside h2 {
+    background-color: darkblue;
+    margin: 25px 55px 25px 20px;
+    font-size: 1.25em;
+}
+
+/* removing the bullet points and aligining the text of the unordered list */
+ul {
+    list-style-type: none;
+}
+
+/* sets the marginss for the cast list */
+aside p {
+    margin-left: 20px;
+}
+
+aside img {
+    margin: 1px;
+}
+
+/* sets the margin for the list of the aside */
+article {
+    margin-left: 370px;
+}
+
+/* changes the header of the main article */
+article h1 {
+    background-color: darkblue;
+    padding: 8px 0;
+    font-family: "Arial Black";
+    font-weight: bolder;
+    color: white;
+}
+
+/* chagnges the style of the second header in the main article */
+article h2 {
+    background-color: red;
+    color: white;
+    padding: 5px 0;
+    font-size: 1.25em;
+}
+
+/* italicizes the emphasis phrases */
+em {
+    font-style: italic;
+}
+
+/* changes the links to white */
+a {
+    color: white;
+}
+
+/* makes the links blue when hovered */
+a:hover {
+    color: blue;
+    background: white;
+}
+
+aside h2 a {
+    text-decoration: none;
+}
+
+/* clears the float and changes the style and borders of the footer */
+footer {
+    float: clear;
+    border: lightslategrey solid;
+    border-width: 1px 1px 2px 2px;
+    border-radius: 2px;
+    border-top-color: black;
+    border-right-color: black;
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: .1em;
+    font-size: .98em;
+    padding: 5px 0;
+}
